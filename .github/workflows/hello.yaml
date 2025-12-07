@@ -1,0 +1,17 @@
+name: Run hello-word
+on:
+  workflow-dispatch
+jobs:
+   Run-bash-jobs
+     runs-on: ubuntu-latest
+     steps:
+      - name: checkout repository
+      - uses: checkout/checkout@v4
+
+      - name: install python
+      - uses: checkout/setup-python@v4
+        with: python '3.10'
+
+      - name: Run python scrip
+        run:
+        python python.py
